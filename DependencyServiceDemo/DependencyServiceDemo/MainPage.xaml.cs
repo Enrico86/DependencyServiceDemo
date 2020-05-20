@@ -1,10 +1,12 @@
-﻿using System;
+﻿using DependencyServiceDemo.DependencyServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+
 
 namespace DependencyServiceDemo
 {
@@ -16,6 +18,13 @@ namespace DependencyServiceDemo
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            var service = DependencyService.Get<IPlatformMessage>();
+            var message = service.GetMessage();
+            await DisplayAlert("Service", message, "OK");
         }
     }
 }

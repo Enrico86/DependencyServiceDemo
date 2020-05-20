@@ -7,10 +7,9 @@
              x:Class="DependencyServiceDemo.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Button HeightRequest="100"
+                Text="Get me a message"
+                Clicked="Button_Clicked"></Button>
     </StackLayout>
 
 </ContentPage>
