@@ -10,6 +10,14 @@
         <Button HeightRequest="100"
                 Text="Get me a message"
                 Clicked="Button_Clicked"></Button>
+        <Entry x:Name="texto"
+               Keyboard="Text"
+               Placeholder="Texto a convertir en voz"
+               FontSize="Medium"></Entry>
+        <Button HeightRequest="100"
+                Text="Text to speach"
+                Clicked="TextToSpeech_OnClicked"></Button>
     </StackLayout>
+
 
 </ContentPage>
